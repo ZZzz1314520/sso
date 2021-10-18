@@ -1,3 +1,4 @@
+package cn.cqu.edu.sso.domain;
 //用户类
 public class User {
     private String name;
