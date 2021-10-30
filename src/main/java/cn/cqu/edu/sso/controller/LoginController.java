@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMethod;
 import cn.cqu.edu.sso.domain.User;
+import cn.cqu.edu.sso.service.LoginService;
 
 @RestController
 public class LoginController {
@@ -19,7 +20,7 @@ public class LoginController {
     )
     {
     	User user = new User(admin,password);
-        
-        return false;
+        LoginService loginService = new LoginService();
+        return loginService.loginPasswordCheck(user);
     }
 }

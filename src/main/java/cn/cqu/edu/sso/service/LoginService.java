@@ -1,15 +1,17 @@
 package cn.cqu.edu.sso.service;
 
+import cn.cqu.edu.sso.domain.User;
+import cn.cqu.edu.sso.dao.VDataBase;
+
 public class LoginService{
 
-    public LoginService(User user){
-        
+    VDataBase vDataBase;
+
+    public LoginService(){
+        this.vDataBase = new VDataBase();
     }
 
-    public static void main(String[] args) {
-        
+    public boolean loginPasswordCheck(User user){
+        return vDataBase.checkUser(user);
     }
-
-    LoginService();
-    
 }
