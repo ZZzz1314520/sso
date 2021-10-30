@@ -1,4 +1,5 @@
 package cn.cqu.edu.sso.controller;
+
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,15 +11,13 @@ import cn.cqu.edu.sso.domain.User;
 
 @RestController
 public class LoginController {
-    @GetMapping(value="/user/test")
-    public String test()
+    @RequestMapping(value="/user/login",method = RequestMethod.POST)
+    public boolean test(String admin, String password)
     {
-        return "test4";
-    }
-    @RequestMapping(value="/user/login")
-    public String login(User user)
-    {
-        //检测用户是否已经登录
-        return "待添加";
+    	
+    	if(admin.equals("A") && password.equals("B")) {
+    		return true;
+    	}
+        return false;
     }
 }
