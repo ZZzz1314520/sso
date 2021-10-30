@@ -13,13 +13,13 @@ import cn.cqu.edu.sso.domain.User;
 @RestController
 public class LoginController {
     @RequestMapping(value="/user/login",method = RequestMethod.POST)
-    public boolean test(@RequestParam(value = "admin") String admin, 
-    @RequestParam(value = "password") String password)
+    public boolean test(
+        @RequestParam(value = "admin",required = true) String admin, 
+        @RequestParam(value = "password",required = true) String password
+    )
     {
-    	
-    	if(admin.equals("A") && password.equals("B")) {
-    		return true;
-    	}
+    	User user = new User(admin,password);
+        
         return false;
     }
 }
