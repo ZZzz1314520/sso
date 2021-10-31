@@ -55,6 +55,11 @@
 			<artifactId>hutool-core</artifactId>
 			<version>4.3.1</version>
 		</dependency>
+		<!--引入thymeleaf依赖-->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
