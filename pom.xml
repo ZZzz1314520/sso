@@ -32,6 +32,29 @@
  			<groupId>org.springframework.boot</groupId>
  			<artifactId>spring-boot-starter-web</artifactId>
  		</dependency>
+		 <!-- jwt依赖 -->
+		 <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+		<dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+		<!-- json格式 -->
+		<dependency>
+    		<groupId>com.alibaba</groupId>
+    		<artifactId>fastjson</artifactId>
+    		<version>1.2.47</version>
+		</dependency>
+		<!-- 类转化map -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-core</artifactId>
+			<version>4.3.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
