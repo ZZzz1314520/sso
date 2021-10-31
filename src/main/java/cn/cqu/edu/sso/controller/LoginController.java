@@ -13,13 +13,15 @@ import cn.cqu.edu.sso.service.LoginService;
 
 @RestController
 public class LoginController {
-    @RequestMapping(value="/user/login",method = RequestMethod.POST)
-    public boolean test(
-        @RequestParam(value = "admin",required = true) String admin, 
-        @RequestParam(value = "password",required = true) String password
-    )
-    {
-    	User user = new User(admin,password);
+    @RequestMapping("/hello")
+    public String hello() {
+        return "Hello World!";
+    }
+
+    @RequestMapping(value = "/user/login", method = RequestMethod.POST)
+    public boolean test(@RequestParam(value = "admin", required = true) String admin,
+            @RequestParam(value = "password", required = true) String password) {
+        User user = new User(admin, password);
         LoginService loginService = new LoginService();
         return loginService.loginPasswordCheck(user);
     }
