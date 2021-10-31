@@ -15,6 +15,11 @@ import com.auth0.jwt.interfaces.DecodedJWT;
 
 @RestController
 public class LoginController {
+    @RequestMapping("/hello")
+    public String hello() {
+        return "Hello World!";
+    }
+
     @RequestMapping(value = "/user/login", method = RequestMethod.POST)
     public JSONObject login(@RequestParam(value = "admin", required = true) String admin,
             @RequestParam(value = "password", required = true) String password) {
