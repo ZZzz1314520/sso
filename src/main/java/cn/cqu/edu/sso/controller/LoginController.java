@@ -24,8 +24,8 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/user/test", method = RequestMethod.POST)
-    public String test(String token) {
+    public boolean test(String token, String name, String pwd) {
         LoginService loginService = new LoginService();
-        return loginService.tokenCheck(token);
+        return loginService.tokenCheck(token, name, pwd);
     }
 }

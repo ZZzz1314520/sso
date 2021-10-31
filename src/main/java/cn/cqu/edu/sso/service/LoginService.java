@@ -31,7 +31,8 @@ public class LoginService {
         return result;
     }
 
-    public String tokenCheck(String token) {
-        return JwtUtil.dateToString(JwtUtil.verifier(token).getExpiresAt());
+    public boolean tokenCheck(String token, String name, String pwd) {
+        User user = new User(name, pwd);
+        return JwtUtil.verifyToken(token, user);
     }
 }
