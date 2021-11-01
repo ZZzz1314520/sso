@@ -15,8 +15,7 @@ import cn.cqu.edu.sso.domain.User;
 
 public class JwtUtil {
     // 签名随意写，但复杂性越高，安全性越高
-    public static final String SING = "114514";
-
+    public static final String SING = "WULIAO2016LEMON_XIZZ";
     /**
      * 生成token
      */
